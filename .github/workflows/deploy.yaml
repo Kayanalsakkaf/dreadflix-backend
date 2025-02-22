@@ -17,9 +17,9 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t dreadflixbackend.azurecr.io/samples/stream:${{ github.sha }} .
+          docker build -t dreadflixbackend.azurecr.io/samples/stream:${{ github.sha }} dreadflixbackend.azurecr.io/samples/neo4j:latest
           docker push dreadflixbackend.azurecr.io/samples/stream:${{ github.sha }}
-
+          docker push dreadflixbackend.azurecr.io/samples/stream:lastest
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest
