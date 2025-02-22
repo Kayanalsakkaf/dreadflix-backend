@@ -20,7 +20,8 @@ jobs:
           docker build -t dreadflixbackend.azurecr.io/samples/stream:${{ github.sha }} .
           docker tag dreadflixbackend.azurecr.io/samples/stream:${{ github.sha }} dreadflixbackend.azurecr.io/samples/stream:latest
           docker push dreadflixbackend.azurecr.io/samples/stream:${{ github.sha }}
-          docker push dreadflixbackend.azurecr.io/samples/stream:lastest
+          docker push dreadflixbackend.azurecr.io/samples/stream:latest
+
 
   deploy:
     needs: build-and-push
