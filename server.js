@@ -17,7 +17,7 @@ app.use(
 
 app.use(express.json());
 
-app.use("movies/api/movies", movieRoute); //reference
+app.use("/movies/api/movies", movieRoute); //reference
 
 app.listen(process.env.PORT || 3007, () => {
   console.log("Backend server is running!");
